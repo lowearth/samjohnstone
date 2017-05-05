@@ -1,0 +1,283 @@
+/** 0 - Sass Variables */
+
+$body: 'Source Code Pro', monospace
+$display: 'Work Sans', sans-serif
+
+$brand-colour: #dc9632
+$black: #121212
+$dark-grey: #444444
+$grey: #999999
+$light-grey: #eeeeee
+$white: #ffffff
+$true-black: #000000
+
+$body-small: 0.9em
+$bodysize: 1.1em
+$displaysize: 2.4em
+
+/** 1 - Body */
+
+body
+	background: $black
+	background-image: url("http://localhost/wp-content/uploads/2017/04/Artboard-1@2x.png")
+	background-size: 125% auto
+	background-repeat: y-repeat
+
+.row
+	padding: auto
+	margin-bottom: 4em
+
+p
+	font-size: $bodysize
+	font-family: $body
+	color: $white
+	line-height: 2em
+	max-width: 48em
+
+
+h1,h2,h3,h4,h5,h6
+	font-size: $displaysize
+	font-family: $display
+	color: $dark-grey
+
+h1,
+	font-size: $displaysize
+	font-family: $body
+	font-weight: 100
+	line-height: 1.75em
+	max-width: 20em
+	color: $white
+
+h2,
+	font-size: $body-small
+
+
+h4,
+	font-size: $bodysize
+
+hr
+	margin: 6em 0
+	border-color: $dark-grey
+
+.front-page
+	padding-bottom: 12em
+
+
+
+/** 2 - Nav */
+
+.logo
+	width: 141px
+	height: auto
+	margin: 0 0 0 -3em
+	background-color: none
+
+.top-bar
+	width: 100%
+	margin: 0 auto
+	padding: 5em 0 0 0
+	top: 0
+	left: 0
+	font-size: 0.9em
+	background: transparent
+
+.top-bar, .top-bar ul
+	background-color: transparent !important
+
+.top-bar-right
+	padding: 25px 0em
+	font-family: $display
+	line-height: 2em
+	font-weight: 900
+
+.top-bar
+	background-color: $black
+
+.menu a
+	color: $white
+	border-bottom: 0
+
+.menu a:hover
+	color: $brand-colour
+
+.menu a:visited
+	color: $white
+
+.menu>li>a
+	padding: 0
+	margin: 0 0 0 3em
+
+.page-id-4 #about
+	border-bottom: 1px solid $brand-colour
+
+.page-id-2 #work
+	border-bottom: 1px solid $brand-colour
+
+.page-id-6 #journal
+	border-bottom: 1px solid $brand-colour
+
+.header-text
+	text-align: center !important
+	font-size: $displaysize
+	color: $white
+	vertical-align: middle
+
+/** 3 - Images */
+
+#gallery-1 img
+	border: none !important
+
+#gallery-1 .gallery-caption
+	margin-top: -1em !important
+
+.gallery-item
+	margin-bottom: -1em !important
+
+img
+	border-radius: 2px
+	margin: 1em 0
+
+a img
+	transition: filter 0.1s ease-out
+		transition-property: filter
+		transition-duration: 0.1s
+		transition-timing-function: ease-out
+		transition-delay: initial
+
+a img:hover
+	-webkit-filter: brightness(75%)
+
+a
+	color: $white
+	border-bottom: 1px solid $brand-colour
+
+a:hover
+	color: $brand-colour
+
+.portfolio-image img
+	width: 125%
+	max-width: 125% !important
+	position: relative
+	left: -12.5% !important
+
+.page-title
+	font-weight: 900
+	border-bottom: 0
+	font-size: 1em
+	font-color: $black !important
+	color: $black
+
+.services
+	background: $white
+	padding: 4em 2em
+	box-shadow: 0 1px 2px rgba(0,0,0,1)
+	margin-bottom: 2em
+	border-radius: 4px
+	height: 500px
+	/*background: linear-gradient(135deg, transparent 30px, $white 0) */
+	background-color: $white
+	-webkit-transition: background-color 500ms ease-out
+	-ms-transition: background-color 500ms ease-out
+	transition: background-color 500ms ease-out
+
+.services:hover
+	background-color: #ffcd78
+	color: $brand-colour
+
+.button
+	margin-top: 2em
+	width: 100%
+	border-radius: 2px
+	background-color: transparent
+	border: 2px solid $brand-colour
+	color: $brand-colour
+	-webkit-transition: border 500ms ease-out
+	-ms-transition: border 500ms ease-out
+	transition: border 500ms ease-out
+	-webkit-transition: color 500ms ease-out
+	-ms-transition: color 500ms ease-out
+	transition: color 500ms ease-out
+
+.button:hover
+	background-color: transparent
+	border: 2px solid $black
+	color: $black
+
+.button a
+	color: $brand-colour !important
+	border-bottom: 0
+	font-family: $body
+	text-transform: uppercase
+
+
+/** 4 - Footer */
+
+.footer-links a
+	border-bottom: none
+	color: $dark-grey
+
+.footer-links a:hover
+	border-bottom: none
+	color: $brand-colour
+
+.footer p
+	color: $dark-grey !important
+	
+.site-footer
+	width: 100%
+	margin: 0 auto
+	padding: 5em 5em 2em
+	font-size: $body-small
+	top: 0
+	left: 100px
+	text-align: left
+	background-color: $true-black
+	border-bottom: none
+
+
+/** 3 - Media Queries */
+
+@media (max-width: 640px)
+
+	body
+		margin: 1em !important
+		max-width: 100% !important
+
+	.title-bar
+		background: $white
+		color: $black
+		padding: 2em
+
+	.title-bar .menu-icon 
+		margin-right: 0.5em
+
+	.top-bar
+		position: relative
+		width: 100%
+		top: 0
+
+	.title-bar-title
+		font-weight: 500
+
+	.header-image
+		height: 20em
+
+	.portfolio-image img
+		max-width: 100% !important
+		position: relative
+		left: 0 !important
+
+	.top-bar
+		max-width: 100%
+		margin: 0 auto
+		padding: 0 0 2em 0 !important
+		top: 0
+		left: 0
+		font-size: 0.9em
+		margin-bottom: 4em
+		text-align: center
+
+	.menu>li>a
+		margin: 0 1em
+		padding: 2em 0 0 0
+		text-align: center
